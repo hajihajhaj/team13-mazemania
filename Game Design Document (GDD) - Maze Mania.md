@@ -24,7 +24,7 @@ PC, Console
 
 **Target Audience:**   
 
-Casual players enjoy cooperative games and working with friends to solve challenges. 
+Casual players who enjoy cooperative games and working with friends to solve challenges. 
 
   
 
@@ -80,12 +80,17 @@ Players must reach the end of the maze together, using communication and teamwor
 
 ## 4. Player Objectives (Prototype Focus) 
 
-The prototype will aim to answer the following question:   
+The prototype will aim to answer the following question:  
 
-  
+"How does restricting player visibility to only certain parts of the maze impact teamwork and communication?"
 
-"How does restricting player visibility to only certain parts of the maze impact teamwork and communication?" 
+**Challenges Requiring Communication:**   
 
+- Navigating traps that only one player can see while the other player is unaware.
+
+- Solving puzzles, where one player has the clue and the other faces the puzzle. 
+
+- Coordinating actions for time-sensitive challenges, requiring precise timing and clear instructions.
   
 
 --- 
@@ -116,13 +121,14 @@ The prototype will aim to answer the following question:
 
 ### Laser Grid Puzzle 
 
-- **Clue Location**: In Player 1’s maze, display the sequence Left-Right-Right as a clue. 
+- **Clue Location**: In Player 1’s maze, display the sequence Left-Up-Right as a clue. 
 
-- **Puzzle Location**: In Player 2’s maze, set up a laser grid with a control panel. 
+- **Puzzle Location**: In Player 2’s maze, set up a laser grid with buttons. 
 
-- **Mechanic**: Player 2 enters the correct sequence to deactivate the lasers. Entering the wrong sequence keeps the laser active, and Player 2 must try again. 
+- **Mechanic**: Player 2 enters the correct sequence to deactivate the lasers. Entering the wrong sequence keeps the laser active, and Player 2 must try again.
 
-  
+
+![Rough Sketch of the Game](https://github.com/Varsha-vk05/forpics/blob/main/Maze%20sketch.png?raw=true)
 
 --- 
 
@@ -132,13 +138,21 @@ The prototype will aim to answer the following question:
 
 **Restricted Visibility**: Each player can only see certain traps and paths in the other player’s maze, requiring them to communicate to navigate effectively. 
 
+**Challenges:**   
+
+- Players must solve puzzles that depend on information only one player has.
+
+- Players must trust each other’s guidance when they can’t see certain hazards.
+
  
 
 **Timer**:   
 
 The game has a time limit to complete the maze, creating urgency and pressure for quick communication. 
 
-  
+**Expected Duration:**   
+
+- A single session is expected to last 60 seconds, making it a quick and requires fast thinking and communication.
 
 --- 
 
@@ -148,16 +162,43 @@ The game has a time limit to complete the maze, creating urgency and pressure fo
 
 We want players to feel the rush of navigating the maze under a time limit and the excitement of working with a friend to succeed. The game is designed to be fast-paced and fun, creating a strong sense of teamwork and shared victory. 
 
+**Outcomes:**   
+
+- **Success**: Both players reach the end of the maze before time runs out, resulting in a win.
+  
+- **Failure**: The timer runs out, resulting in a restart.
    
 
 --- 
 
+
+
+## 8. Tools and Platforms
+
+**Development Platform:**
+
+The prototype will be built using Unity.
+
+**Tools:**   
+
+- **Unity Engine**: For game development and prototyping.
   
+- **GitHub**:  For version control and team collaboration.
 
-## 8. Conclusion 
+- **Slack**:  For task management and tracking progress
 
-The split-screen cooperative maze game is designed to test and enhance teamwork, communication, and memory. The primary mechanic to be examined in the prototype is the restricted visibility and how it impacts player engagement and communication under time pressure. 
+  **Ideal Platform:**
 
+Maze Mania is designed primarily for an arcade cabinet taking advantage of the split-screen setup and physical controls for a classic in-person cooperative experience. However, the game could also be adapted for PC in the future.
+
+  
+---
+
+
+
+## 9. Conclusion 
+
+Maze Mania is designed to test and enhance teamwork, communication, and memory. The primary mechanic being examined in the prototype is the restricted visibility and how it impacts player engagement and communication under time pressure. 
   
 
  
