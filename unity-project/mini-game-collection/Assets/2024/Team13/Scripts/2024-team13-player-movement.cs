@@ -5,47 +5,46 @@ namespace MiniGameCollection.Games2024.Team13
 {
     public class PlayerMove : MonoBehaviour
     {
-        //Movement variables
+        // Movement variables
         public float moveSpeed = 5f;
-        //A Vector3 to store the player's location. This is so we can calculate velocity
+        // A Vector3 to store the player's location
         private Vector3 movement;
-        //Component variable for the rigidbody
+        // Component variable for the rigidbody
         private Rigidbody rb;
-        //Jump stuff
+        // Jump variables
         public float jumpHeight = 8f;
         private bool isGrounded;
         public LayerMask groundLayer;
         // Start is called before the first frame update
         void Start()
         {
-            //Initialize the RB variable
+            // Initialize the Rigidbody variable
             rb = GetComponent<Rigidbody>();
-            //Code to constrain rotation
             rb.freezeRotation = true;
         }
         private void Update()
         {
-            //Check for collision with the ground layer using a Raycast (line collision)
+            // Ground check using raycast
             isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.5f, groundLayer);
-            //If the player hits space, and they are on the ground, add a force to the rigidbody. ForceMode.Impulse means "immediate"
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            // Jump input using the ArcadeInput system
+            if (ArcadeInput.Player1.Action1.Pressed && isGrounded)
             {
                 rb.AddForce(new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z), ForceMode.Impulse);
             }
         }
         void FixedUpdate()
         {
-            //Create two float variables for horizontal and vertical axes
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
-            //Send h and v to a custom function called Move
+            // Get horizontal and vertical movement from the ArcadeInput system
+            float h = ArcadeInput.Player1.AxisX;
+            float v = ArcadeInput.Player1.AxisY;
+            // Move the player
             Move(h, v);
         }
         void Move(float hSpeed, float vSpeed)
         {
-            //Assign these values to the movement Vector3
+            // Calculate movement vector
             movement = (transform.forward * vSpeed) + (transform.right * hSpeed);
-            //Normalize the movement vector and then multiply by movement speed and deltaTime
+            // Normalize movement and apply speed and deltaTime
             movement = movement.normalized * moveSpeed * Time.deltaTime;
             rb.MovePosition(transform.position + movement);
         }
