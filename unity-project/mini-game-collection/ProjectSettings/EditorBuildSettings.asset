@@ -27,17 +27,6 @@ EditorBuildSettings:
     path: Assets/2024/Team00/Scenes/2024-team00-game.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/2024/Team13/Scene/2024-team13-game.unity
-    guid: 2cb0e9ae1aa3e534ca24972749520bf4
-  - enabled: 1
-    path: Assets/2024/Team13/Scene/2024-team13-start.unity
-    guid: a573527627023a740b18c9439c6da093
-  - enabled: 1
-    path: Assets/2024/Team13/Scene/2024-team13-winner.unity
-    guid: 16e086fc4ba56e54aa7f3cfb0c7d572d
-  - enabled: 1
-    path: Assets/2024/Team13/Scene/2024-team13-loser.unity
-    guid: 4a505d1f39140cf4f89f416f6ce05a32
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
